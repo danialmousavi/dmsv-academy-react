@@ -2,11 +2,17 @@ import { Carousel, Container, Row, Col } from "react-bootstrap";
 import './BannerCarousel.css';
 import { useEffect, useState } from "react";
 function BannerCarousel() {
+  // const bannerData=[
+  //   {id:1,imgSrc:'images/main-heading2.webp',title:'Welcome to Academy',text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.'},
+  //   {id:2,imgSrc:'images/parsa-slider1.png',title:'Welcome to Academy',text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.'},
+  //   {id:3,imgSrc:'images/el-2.webp',title:'Welcome to Academy',text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.'},
+  // ]
   const [slides,setSlide]=useState([]);
   useEffect(()=>{
-    fetch('https://academy-d62cf-default-rtdb.firebaseio.com/slides.json').then(res=>res.json()).then(data=>setSlide(data)
+    fetch('https://academy-d62cf-default-rtdb.firebaseio.com/bannerData.json').then(res=>res.json()).then(data=>setSlide(data)
     )
   },[])
+
   return (
     <Carousel interval={3000} pause="hover">
       {slides.map((slide, index) => (
