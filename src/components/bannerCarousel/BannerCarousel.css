@@ -1,0 +1,43 @@
+.imgcar{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    max-width: 100%;
+}
+.carousel-item {
+    padding: 40px 0; /* Add some space around the slides */
+  }
+  
+  .carousel img {
+    max-height: 400px; /* Set a max height for images */
+    object-fit: cover; /* Ensure images fit nicely */
+  }
+  
+  .carousel h3 {
+    font-size: 1.8rem; /* Adjust title size */
+    font-weight: bold;
+  }
+  
+  .carousel p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Ensure carousel indicators (dots) are circular */
+.carousel-indicators button {
+    width: 12px !important;  /* Set fixed width */
+    height: 12px !important; /* Set fixed height */
+    border-radius: 50% !important; /* Make them circular */
+    background-color: #fff !important; /* Default dot color */
+    border: none !important;
+    opacity: 0.8; /* Default transparency */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Active dot */
+  .carousel-indicators .active {
+    background-color: #000 !important; /* Darker color for active indicator */
+    opacity: 1 !important;
+  }
+  

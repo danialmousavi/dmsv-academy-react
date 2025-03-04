@@ -1,0 +1,18 @@
+.m-card{
+    max-width: 18rem;
+    margin:5px;
+    box-shadow: rgba(255, 255, 255, 0.224) 0px 5px 15px;
+    transition: 0.5s;
+}
+.m-card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: rgba(255, 255, 255, 0.607) 0px 5px 15px;
+
+}
+@media (max-width: 576px) {
+    .m-card {
+        margin: 0 auto;
+        width: 90%; /* Adjust width as needed */
+    }
+}

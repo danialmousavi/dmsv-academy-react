@@ -1,0 +1,62 @@
+/* Make carousel indicators circular */
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: #777 !important;
+    border: none !important;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Active indicator */
+  .carousel-indicators .active {
+    background-color: #000 !important;
+    opacity: 1 !important;
+  }
+  
+  /* Custom card styling with flex row */
+  .custom-card {
+
+    border: none !important;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: row; /* Makes it a row layout */
+    align-items: center;
+    height: 150px; /* Set height for a balanced look */
+    box-shadow: 0px 4px 6px rgba(138, 138, 138, 0.32);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Left column - Image */
+  .card-img-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .card-img {
+    width: 50%;
+    max-width: 80px; /* Adjust size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Right column - Text */
+  .custom-card .card-body {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;    
+  }
+  

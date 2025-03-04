@@ -1,0 +1,51 @@
+
+.customs-card:hover{
+    box-shadow: 0px 4px 6px rgba(234, 234, 234, 0.32);
+}
+.customs-card {
+    box-shadow: 0px 4px 6px rgba(138, 138, 138, 0.32);
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.customs-card:hover {
+    box-shadow: 0px 4px 6px rgba(234, 234, 234, 0.32);
+}
+
+@media (max-width: 576px) {
+    .customs-card {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .customs-card .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customs-card .col-sm-2,
+    .customs-card .col-sm-8,
+    .customs-card .col-sm-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .customs-card .col-sm-8 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .customs-card .btn {
+        width: 100%;
+        height: auto;
+        padding: 25px 20px; /* Adjust padding to make the button more substantial */
+        font-size: 1rem;  
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
