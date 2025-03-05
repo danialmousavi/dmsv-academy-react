@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "./BrandsCard.css";
 import BrandsData from "./Brands";
 export default function BrandsCard() {
-  const [brands, setBrands] = useState(BrandsData);
+  const [brands, setBrands] = useState([]);
+  useEffect(()=>{
+    fetch('https://academy-d62cf-default-rtdb.firebaseio.com/BrandsData.json').then(res=>res.json()).then(data=>setBrands(data));
+  })
   return (
     <>
       <Container className="mt-5

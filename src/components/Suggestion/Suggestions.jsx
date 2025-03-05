@@ -5,7 +5,11 @@ import CourseData from '../../coursesData'
 import './Suggestions.css'
 import { Link } from 'react-router-dom'
 export default function Suggestions() {
-    const [courses, setCourses] = useState(CourseData);
+  
+    useEffect(()=>{
+      fetch('https://academy-d62cf-default-rtdb.firebaseio.com/CourseData.json').then(res=>res.json()).then(data=>setCourses(data))
+    },[])
+    const [courses, setCourses] = useState([]);
     const displayedCourses = courses.slice(1, 7);
     const [cardsPerSlide, setCardsPerSlide] = useState(3);
   

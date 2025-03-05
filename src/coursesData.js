@@ -146,13 +146,13 @@
 // ]
 
 // export default CourseData;
-const fetchCourseData = async () => {
-    const response = await fetch('https://academy-d62cf-default-rtdb.firebaseio.com/CourseData.json');
-    const data = await response.json();
-    console.log(data);  
-    return data;
-};
+// const fetchCourseData = async () => {
+//     const response = await fetch('https://academy-d62cf-default-rtdb.firebaseio.com/CourseData.json');
+//     const data = await response.json();
+//     console.log(data);  
+//     return data;
+// };
 
-const CourseData = await fetchCourseData();
+// const CourseData = await fetchCourseData();
 
-export default CourseData;
+// export default CourseData;

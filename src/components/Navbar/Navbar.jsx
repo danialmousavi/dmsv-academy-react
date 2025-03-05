@@ -24,6 +24,7 @@ function Navbarr() {
             id={`offcanvasNavbar-expand-$md`}
             aria-labelledby={`offcanvasNavbarLabel-expand-$md`}
             placement="end"
+            style={{ backgroundColor: '#1D1E1F' }}
           >
             <Offcanvas.Header closeButton className="custom-close-button">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-$md`} className='text-white'>

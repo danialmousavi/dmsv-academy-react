@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import './plans.css';
-import planData from "./plansData";
+// import planData from "./plansData";
 import { TiTick } from "react-icons/ti";
 
 export default function Plans() {
-  const [plans, setPlans] = useState(planData);
+  const [plans, setPlans] = useState([]);
+  useEffect(()=>{
+    fetch('https://academy-d62cf-default-rtdb.firebaseio.com/planData.json').then(res=>res.json()).then(data=>setPlans(data))
+  },[])
   return (
     <>
       <Container className="mt-5">
