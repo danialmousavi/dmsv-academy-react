@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import './plans.css';
 // import planData from "./plansData";
 import { TiTick } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 export default function Plans() {
   const [plans, setPlans] = useState([]);
@@ -30,7 +31,7 @@ export default function Plans() {
                   </Card.Body>
                 </Col>
                 <Col sm={2} className="d-flex align-items-center justify-content-center">
-                  <Button variant="outline-warning" className="w-100 h-50">Register</Button>
+                  <Link variant="outline-warning" className="btn btn-outline-warning text-center d-flex align-items-center justify-content-center w-100 h-50" to='/register' >Register</Link>
                 </Col>
               </Row>
             </Card>

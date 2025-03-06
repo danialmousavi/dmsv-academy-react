@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Timer.css'
+import { Link } from "react-router-dom";
 const CountdownTimer = ({ eventDate }) => {
     const calculateTimeLeft = () => {
         const now = moment();
@@ -50,7 +51,8 @@ const CountdownTimer = ({ eventDate }) => {
             </div>
             <h1 className="text-white mt-3">Wait for good news!</h1>
             <h3 className="text-white mt-3">Register to undestand sooner</h3>
-            <button className="btn btn-warning p-4 mt-4">Register Now</button>
+            <Link variant="outline-warning" className="btn btn-outline-warning text-center d-flex align-items-center justify-content-center w-100 h-50" to='/register' >Register</Link>
+
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col ,Row} from 'react-bootstrap'
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { Link } from 'react-router-dom';
 export default function CourseDataCard({course}) {
     console.log(course);
     
@@ -10,7 +11,7 @@ return (
             <h2 className="text-center text-warning">{course.price}$</h2>
         </div>
         <div className="mt-3">
-            <button className="btn btn-warning w-100">Register</button>
+            <Link className="btn btn-warning w-100" to='/register'>Register</Link>
         </div>
         <div className="mt-3">
             <Row className="d-flex justify-content-between align-items-center mt-3">
